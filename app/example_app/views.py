@@ -10,7 +10,7 @@ from django.views.decorators.csrf import csrf_exempt
 # This part remains the same, but with more robust error handling.
 try:
     # IMPORTANT: Update this path to where your model is located on the server.
-    MODEL_PATH = './digit_classifier.keras'
+    MODEL_PATH = 'app/example_app/digit_classifier.keras'
     model = tf.keras.models.load_model(MODEL_PATH)
     print(f"✅ Model loaded successfully from {MODEL_PATH}")
 except Exception as e:
