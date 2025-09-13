@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-r(z^n29_r&ax*%(!la2i*cy@*$2q1h(ulie!%@qy)5j-i9kepw
 DEBUG = os.environ.get('DEBUG', 'False') == 'True'
 
 ALLOWED_HOSTS = [
-    '*'
+    
 ]
 
 
@@ -51,7 +51,9 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware', 
+    'whitenoise.middleware.WhiteNoiseMiddleware',
+    'corsheaders.middleware.CorsMiddleware', 
+    
 ]
 
 ROOT_URLCONF = 'defang_sample.urls'
@@ -128,11 +130,13 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
+CORS_ALLOWED_ORIGINS = [
+    "https://shaikmahammedzubair69.github.io/handwriten-digit-predictor/",
+]
 # CSRF
 CSRF_TRUSTED_ORIGINS = [
     'https://*.defang.dev',
-    'https://shaikmahammedzubair69.github.io/handwriten-digit-predictor/'
+    'https://shaikmahammedzubair69.github.io/handwriten-digit-predictor/',
 ]
 
 if DEBUG:
