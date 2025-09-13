@@ -131,7 +131,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # CSRF
 CSRF_TRUSTED_ORIGINS = [
-    'https://*.defang.dev'
+    'https://*.defang.dev',
+    'https://shaikmahammedzubair69.github.io/handwriten-digit-predictor/'
 ]
 
 if DEBUG:
