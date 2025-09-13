@@ -131,13 +131,14 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 CORS_ALLOWED_ORIGINS = [
-    "https://shaikmahammedzubair69.github.io/handwriten-digit-predictor/",
+    "https://shaikmahammedzubair69.github.io",
 ]
 # CSRF
 CSRF_TRUSTED_ORIGINS = [
     'https://*.defang.dev',
-    'https://shaikmahammedzubair69.github.io/handwriten-digit-predictor/',
+    'https://shaikmahammedzubair69.github.io',
 ]
+CORS_ALLOW_ALL_ORIGINS = True
 
 if DEBUG:
     CSRF_TRUSTED_ORIGINS = [
